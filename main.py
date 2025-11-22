@@ -1,0 +1,208 @@
+import textwrap
+from fastapi import FastAPI
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles  # Import for static files
+
+# 1. Initialize the FastAPI app
+app = FastAPI(
+    title="💖 Love Message App 💖",
+    description="A simple, romantic FastAPI app for Khushi."
+)
+
+# 2. Mount the static directory
+# This makes files in the 'static' folder (where adio.mp3 is assumed to be)
+# accessible at the URL prefix '/static'.
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+
+# 3. Function to generate the HTML content
+def get_khushi_html_content() -> str:
+    """
+    Generates the full HTML content for the love message page.
+    The audio source is set to '/static/adio.mp3', referencing the uploaded file.
+    """
+
+    # The audio source is now explicitly set to the uploaded file name 'adio.mp3'
+    # The music button and its CSS are removed.
+    # The <audio> tag now includes 'autoplay' and 'loop' attributes.
+    html_content = textwrap.dedent("""
+        <html>
+            <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>For Khushi ❤️</title>
+                <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+                <style>
+                    :root {
+                        --primary-color: #ff1493; /* Deep Pink */
+                        --secondary-color: #ff69b4; /* Hot Pink */
+                        --background-light: #fff0f5; /* Lavender Blush */
+                        --text-color: #4a4a4a;
+                    }
+                    body {
+                        background: linear-gradient(135deg, var(--background-light) 0%, #ffe4e1 100%);
+                        font-family: 'Poppins', sans-serif;
+                        text-align: center;
+                        padding: 40px 20px;
+                        color: var(--primary-color);
+                        min-height: 100vh;
+                        margin: 0;
+                        overflow-x: hidden;
+                    }
+                    .content-box {
+                        background-color: rgba(255, 255, 255, 0.9);
+                        border-radius: 25px;
+                        padding: 30px;
+                        margin: 0 auto;
+                        max-width: 800px;
+                        box-shadow: 0 10px 30px rgba(255, 20, 147, 0.3), 0 0 50px rgba(255, 20, 147, 0.15);
+                    }
+                    h1 {
+                        font-family: 'Pacifico', cursive;
+                        font-size: 4.5em;
+                        font-weight: normal;
+                        margin-top: 0;
+                        color: var(--primary-color);
+                        text-shadow: 0 0 15px var(--secondary-color), 0 0 5px var(--primary-color);
+                        animation: pulse 2s infinite alternate;
+                    }
+                    #typed-message {
+                        font-size: 1.8em;
+                        font-weight: 300;
+                        min-height: 30px;
+                        animation: fadeIn 2s ease-in-out;
+                        display: block; /* Ensure it takes up space */
+                    }
+                    p {
+                        font-size: 1.2em;
+                        line-height: 1.6;
+                        margin-top: 30px;
+                        font-weight: 300;
+                        color: var(--text-color);
+                    }
+
+                    @keyframes fadeIn {
+                        from { opacity: 0; }
+                        to { opacity: 1; }
+                    }
+                    @keyframes pulse {
+                        0% { transform: scale(1); }
+                        100% { transform: scale(1.03); }
+                    }
+                    .heart {
+                        position: fixed;
+                        color: var(--secondary-color);
+                        animation: floatUp var(--duration) linear infinite;
+                        font-size: var(--size);
+                        opacity: 0.8;
+                        pointer-events: none;
+                        z-index: -1;
+                    }
+                    @keyframes floatUp {
+                        0% { transform: translateY(110vh) translateX(0) rotate(0deg); opacity: 1; }
+                        50% { transform: translateY(50vh) translateX(var(--drift)) rotate(180deg); }
+                        100% { transform: translateY(-10vh) translateX(0) rotate(360deg); opacity: 0; }
+                    }
+                    @media (max-width: 600px) {
+                        h1 {
+                            font-size: 2.8em;
+                            padding-top: 20px;
+                        }
+                        #typed-message {
+                            font-size: 1.2em;
+                        }
+                        .content-box {
+                            padding: 20px 15px;
+                            border-radius: 15px;
+                        }
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="content-box">
+                    <h1>💖 I Love You Khushi 💖</h1>
+                    <h2 id="typed-message"></h2>
+
+                    <p>You are the most beautiful part of my life 🌸<br>
+                    Whenever you smile, the whole world feels brighter ✨<br>
+                    You are my happiness, my heart, and my forever 💕</p>
+                </div>
+
+                <audio id="romantic-song" preload="auto" autoplay loop style="display: none;">
+                    <source src="/static/adio.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+
+                <script>
+                    // --- Typing Effect Script ---
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const textToType = "💍 Forever & Always Yours 💍";
+                        const element = document.getElementById("typed-message");
+                        let i = 0;
+
+                        function typeWriter() {
+                            if (i < textToType.length) {
+                                element.innerHTML += textToType.charAt(i);
+                                i++;
+                                setTimeout(typeWriter, 75);
+                            }
+                        }
+                        setTimeout(typeWriter, 1000);
+
+                        // --- Auto-Play Attempt Script (Best effort, but browser restrictions may apply) ---
+                        const audio = document.getElementById('romantic-song');
+                        audio.play().catch(error => {
+                            // Log error if autoplay is blocked by the browser.
+                            console.log("Autoplay was prevented by the browser. A user interaction is required.", error);
+                            // Optional: Alert the user that audio is blocked (less common in modern design)
+                            // alert("Please click anywhere on the page to start the music!");
+                        });
+                    });
+
+
+                    // --- Floating Hearts Script ---
+                    function createHeart() {
+                        const heart = document.createElement("div");
+                        const symbols = ["❤️", "💖", "✨", "🌸", "💕", "💞"];
+                        const randomSymbol = symbols[Math.floor(Math.random() * symbols.length)];
+
+                        const size = Math.random() * 10 + 16;
+                        const duration = Math.random() * 4 + 6;
+                        const drift = (Math.random() - 0.5) * 50 + "px";
+
+                        heart.className = "heart";
+                        heart.innerHTML = randomSymbol;
+
+                        heart.style.setProperty('--duration', duration + 's');
+                        heart.style.setProperty('--size', size + 'px');
+                        heart.style.setProperty('--drift', drift);
+
+                        heart.style.left = Math.random() * 100 + "vw";
+                        heart.style.animationDelay = (Math.random() * 2) + "s";
+
+                        document.body.appendChild(heart);
+                        setTimeout(() => heart.remove(), duration * 1000);
+                    }
+                    setInterval(createHeart, 250);
+                </script>
+            </body>
+        </html>
+    """)
+    return html_content
+
+
+# 4. Define the Endpoint
+@app.get("/", response_class=HTMLResponse)
+@app.get("/khushi", response_class=HTMLResponse)
+def love_message() -> HTMLResponse:
+    """
+    Serves the romantic HTML page for Khushi.
+    Accessible at the root URL (/) and /khushi.
+    """
+    html_content = get_khushi_html_content()
+    return HTMLResponse(content=html_content, status_code=200)
+
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run(app, host="0.0.0.0", port=8000)

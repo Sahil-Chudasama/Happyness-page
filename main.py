@@ -287,7 +287,7 @@ def get_khushi_html_content() -> str:
             </div>
 
             <!-- Static Audio File Reference -->
-            <audio id="romantic-song" src="/static/adio.mp3" loop preload="auto"></audio>
+            <audio id="romantic-song" src="/static/audio.mp3" loop preload="auto"></audio>
 
             <script>
                 document.addEventListener("DOMContentLoaded", function() {

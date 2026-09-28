@@ -75,11 +75,13 @@ def get_khushi_html_content() -> str:
                 
                 /* Relationship Counter */
                 .counter-box {
-                    background: rgba(255, 240, 243, 0.9);
-                    border: 1px dashed var(--secondary-color);
-                    border-radius: 15px;
-                    padding: 15px;
+                    background: rgba(255, 255, 255, 0.75);
+                    border: 2px solid rgba(255, 42, 95, 0.3);
+                    border-radius: 18px;
+                    padding: 16px;
                     margin: 20px 0;
+                    box-shadow: 0 8px 20px rgba(255, 42, 95, 0.15); /* Soft pink glow */
+                    backdrop-filter: blur(5px);
                 }
                 .counter-title {
                     font-size: 0.9rem;
@@ -235,7 +237,7 @@ def get_khushi_html_content() -> str:
 
                 <!-- Relationship Timer -->
                 <div class="counter-box">
-                    <div class="counter-title">Together Since 💕</div>
+                    <div class="counter-title">Together Since 31 July 2025💕</div>
                     <div class="timer">
                         <div class="time-unit"><span id="days">0</span><span>Days</span></div>
                         <div class="time-unit"><span id="hours">0</span><span>Hours</span></div>

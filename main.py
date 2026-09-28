@@ -277,7 +277,7 @@ def get_khushi_html_content() -> str:
 
                 <p class="message-p">You are the best decision my heart ever made 🌸<br>
                 I love you more than words can ever capture ✨<br>
-                You are my today, my tomorrow, and my always 💕</p>
+                You are my always 💕</p>
             </div>
 
             <!-- Static Audio File Reference -->

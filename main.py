@@ -275,9 +275,9 @@ def get_khushi_html_content() -> str:
                     <button id="music-button">Tap Me to Start the Music 🎵</button>
                 </div>
 
-                <p class="message-p">You are the most beautiful part of my life 🌸<br>
-                Whenever you smile, the whole world feels brighter ✨<br>
-                You are my happiness, my heart, and my forever 💕</p>
+                <p class="message-p">You are the best decision my heart ever made 🌸<br>
+                I love you more than words can ever capture ✨<br>
+                You are my today, my tomorrow, and my always 💕</p>
             </div>
 
             <!-- Static Audio File Reference -->

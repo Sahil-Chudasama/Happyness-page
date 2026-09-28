@@ -235,7 +235,7 @@ def get_khushi_html_content() -> str:
 
                 <!-- Relationship Timer -->
                 <div class="counter-box">
-                    <div class="counter-title">Together Since 💕</div>
+                    <div class="counter-title">Together Since "31-07-2025"💕</div>
                     <div class="timer">
                         <div class="time-unit"><span id="days">0</span><span>Days</span></div>
                         <div class="time-unit"><span id="hours">0</span><span>Hours</span></div>
@@ -249,14 +249,14 @@ def get_khushi_html_content() -> str:
                 <div class="cards-grid">
                     <div class="flip-card" onclick="this.classList.toggle('flipped')">
                         <div class="flip-card-inner">
-                            <div class="flip-card-front">Memory 1 ✨</div>
-                            <div class="flip-card-back">Your Beautiful Smile 💖</div>
+                            <div class="flip-card-front">Memory 1 👀</div>
+                            <div class="flip-card-back">Whenever I looked at you, you would blush 💖</div>
                         </div>
                     </div>
                     <div class="flip-card" onclick="this.classList.toggle('flipped')">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">Memory 2 💃</div>
-                            <div class="flip-card-back">Playing dodhiya together 💃✨</div>
+                            <div class="flip-card-back">Playing Dodhiya Together 💃✨</div>
                         </div>
                     </div>
                     <div class="flip-card" onclick="this.classList.toggle('flipped')">
@@ -268,7 +268,7 @@ def get_khushi_html_content() -> str:
                     <div class="flip-card" onclick="this.classList.toggle('flipped')">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">Memory 4 🌟</div>
-                            <div class="flip-card-back">When you get cute-angry at me "😤😤"</div>
+                            <div class="flip-card-back">Whenever you get cute-angry at me "😤😤"</div>
                         </div>
                     </div>
                 </div>

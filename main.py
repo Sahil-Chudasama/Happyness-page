@@ -75,7 +75,7 @@ def get_khushi_html_content() -> str:
                 
                 /* Relationship Counter */
                 .counter-box {
-                    background: rgba(255, 255, 255, 0.75);
+                    background: rgba(255, 255, 255, 0.25);
                     border: 2px solid rgba(255, 42, 95, 0.3);
                     border-radius: 18px;
                     padding: 16px;

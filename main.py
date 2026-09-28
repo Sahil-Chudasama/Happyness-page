@@ -117,8 +117,8 @@ def get_khushi_html_content() -> str:
                     flex-wrap: wrap;
                 }
                 .flip-card {
-                    width: 110px;
-                    height: 130px;
+                    width: 120px;
+                    height: 140px;
                     perspective: 1000px;
                     cursor: pointer;
                 }
@@ -145,7 +145,7 @@ def get_khushi_html_content() -> str:
                     align-items: center;
                     justify-content: center;
                     padding: 8px;
-                    font-size: 0.85rem;
+                    font-size: 0.82rem;
                     font-weight: 600;
                 }
                 .flip-card-front {
@@ -235,7 +235,7 @@ def get_khushi_html_content() -> str:
 
                 <!-- Relationship Timer -->
                 <div class="counter-box">
-                    <div class="counter-title">Together Since 💍</div>
+                    <div class="counter-title">Together Since 💕</div>
                     <div class="timer">
                         <div class="time-unit"><span id="days">0</span><span>Days</span></div>
                         <div class="time-unit"><span id="hours">0</span><span>Hours</span></div>
@@ -256,13 +256,13 @@ def get_khushi_html_content() -> str:
                     <div class="flip-card" onclick="this.classList.toggle('flipped')">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">Memory 2 🌸</div>
-                            <div class="flip-card-back">Every Moment With You 💕</div>
+                            <div class="flip-card-back">When you fed me 5-Star 🍫 with your own hands ✨</div>
                         </div>
                     </div>
                     <div class="flip-card" onclick="this.classList.toggle('flipped')">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">Memory 3 🌟</div>
-                            <div class="flip-card-back">You Are My Forever 💍</div>
+                            <div class="flip-card-back">When you get cute-angry at me "😤😤"</div>
                         </div>
                     </div>
                 </div>
@@ -325,7 +325,7 @@ def get_khushi_html_content() -> str:
                         }
                     });
 
-                    // 3. Relationship Counter (Date change karein yahan YYYY-MM-DD)
+                    // 3. Relationship Counter (Date: 31 July 2025, 6:30 PM)
                     const startDate = new Date("2025-07-31T18:30:00");
                     function updateTimer() {
                         const now = new Date();

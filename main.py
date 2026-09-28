@@ -44,7 +44,7 @@ def get_khushi_html_content() -> str:
                     align-items: center;
                 }
                 .content-box {
-                    background-color: rgba(255, 255, 255, 0.88);
+                    background-color: rgba(255, 255, 255, 0.70);
                     background-image: url('/static/khushi_photo.jpg');
                     background-size: cover;
                     background-position: center;

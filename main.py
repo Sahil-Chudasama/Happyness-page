@@ -169,21 +169,42 @@ def get_khushi_html_content() -> str:
                     margin-top: 15px;
                 }
                 .vinyl-container {
-                    width: 65px;
-                    height: 65px;
+                    width: 75px;
+                    height: 75px;
                     border-radius: 50%;
-                    background: radial-gradient(circle, #333 30%, #111 70%);
+                    /* Realistic Vinyl Grooves (Lines) for visible spinning */
+                    background: repeating-radial-gradient(
+                        circle,
+                        #111,
+                        #111 5px,
+                        #222 6px,
+                        #111 8px
+                    );
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+                    box-shadow: 0 0 15px rgba(255, 42, 95, 0.4), inset 0 0 10px rgba(255, 255, 255, 0.2);
+                    border: 2px solid #ff758f;
+                    position: relative;
                 }
+                
                 .vinyl-center {
-                    width: 22px;
-                    height: 22px;
+                    width: 28px;
+                    height: 28px;
                     background: var(--primary-color);
                     border-radius: 50%;
                     border: 2px solid white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 12px;
+                    box-shadow: inset 0 0 4px rgba(0,0,0,0.5);
+                }
+                
+                /* Music note center me add karne ke liye */
+                .vinyl-center::after {
+                    content: "🎵";
+                    font-size: 12px;
                 }
                 .spinning {
                     animation: spin 3s linear infinite;

@@ -255,13 +255,19 @@ def get_khushi_html_content() -> str:
                     </div>
                     <div class="flip-card" onclick="this.classList.toggle('flipped')">
                         <div class="flip-card-inner">
-                            <div class="flip-card-front">Memory 2 🌸</div>
+                            <div class="flip-card-front">Memory 2 💃</div>
+                            <div class="flip-card-back">Playing dodhiya together 💃✨</div>
+                        </div>
+                    </div>
+                    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">Memory 3 🌸</div>
                             <div class="flip-card-back">When you fed me 5-Star 🍫 with your own hands ✨</div>
                         </div>
                     </div>
                     <div class="flip-card" onclick="this.classList.toggle('flipped')">
                         <div class="flip-card-inner">
-                            <div class="flip-card-front">Memory 3 🌟</div>
+                            <div class="flip-card-front">Memory 4 🌟</div>
                             <div class="flip-card-back">When you get cute-angry at me "😤😤"</div>
                         </div>
                     </div>

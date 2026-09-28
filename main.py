@@ -235,7 +235,7 @@ def get_khushi_html_content() -> str:
 
                 <!-- Relationship Timer -->
                 <div class="counter-box">
-                    <div class="counter-title">Together Since "31-07-2025"💕</div>
+                    <div class="counter-title">Together Since 💕</div>
                     <div class="timer">
                         <div class="time-unit"><span id="days">0</span><span>Days</span></div>
                         <div class="time-unit"><span id="hours">0</span><span>Hours</span></div>

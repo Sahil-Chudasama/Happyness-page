@@ -21,14 +21,6 @@ def get_khushi_html_content() -> str:
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>For Khushi ❤️</title>
-
-            <!-- Open Graph Tags for Instagram Link Preview -->
-            <meta property="og:title" content="💖 A Special Message For Khushi 💖" />
-            <meta property="og:description" content="Click to open a special surprise!" />
-            <meta property="og:image" content="https://happyness-page-3.onrender.com/static/khushi_photo.jpg" />
-            <meta property="og:url" content="https://happyness-page-3.onrender.com/" />
-            <meta property="og:type" content="website" />
-            
             <!-- Canvas Confetti Library -->
             <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
             <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
